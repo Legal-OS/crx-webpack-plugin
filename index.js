@@ -31,7 +31,8 @@ function Plugin(options) {
   // initiate crx
   this.crx = new ChromeExtension({
     privateKey: fs.readFileSync(this.keyFile),
-    codebase: this.options.updateUrl + '/' + this.crxName
+    codebase: this.options.updateUrl + '/' + this.crxName,
+    version: 3
   });
 }
 
